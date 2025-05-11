@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Axios对原生Ajax进行了封装，简化书写，快速开发 -->
+    <script src="js/axios.js"></script>
+
+    <script>
+        function get(){
+            //方式一:
+            axios({
+                method:"get",
+                url:""  //定义请求地址
+            }).then(result=>{      //成功回调函数
+                console.log(result.data);//获取服务器响应回来的数据
+            })
+
+            //方式二:
+            axios.get("请求地址").then(result=>{
+                console.log(result.data);
+            })
+        }
+
+        function post(){
+            //方式一:
+            axios({
+                method:"post",
+                url:"",
+                data:"id=1" //请求传递的参数
+            }).then(result=>{
+                console.log(result.data);
+            })
+
+            //方式二:
+            axios.post("请求地址","id=1").then(result=>{
+                console.log(result.data);
+            })
+        }
+    </script>
+</body>
+</html>

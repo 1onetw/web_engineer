@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Array对象
+        //定义数组
+        let arr = [1,'刘浩存爱我',true]
+        arr[10] = 'world' //可根据索引取值，也可根据索引改值
+        console.log(arr)//输出数组
+        console.log(arr.length);//长度为11，中间7个空值(undefined值)
+
+        //遍历数组:3种方式
+        //1. for遍历
+        for (let i = 0; i < arr.length; i++) {
+            let s = arr[i];
+            console.log(s);
+        }
+        console.log("-------------------------------");
+        //2. forof遍历
+        for (let i of arr) {
+            console.log(i);
+        }
+        console.log("-------------------------------");
+        //3. foreach遍历
+        //不遍历空值
+        arr.forEach((e,i) => {
+            console.log(i,e);
+        });
+    </script>
+</body>
+</html>

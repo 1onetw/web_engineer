@@ -1,0 +1,38 @@
+h1{
+    color: #4D4F53;
+    size: 38px;
+}
+/* 元素选择器 */
+span{
+    color: gray;
+    /* 设置行高属性 */
+    line-height: 48px;
+}
+/* 类选择器 */
+.gray{
+    color:red
+}
+/* id选择器 */
+#black{
+    color: black;
+}
+/* 优先级: id选择器 > 类选择器 > 元素选择器 */
+
+a{
+    color: black;
+    /* 规定添加到文本的修饰，none表示定义标准的文本 */
+    text-decoration: none;
+}
+
+#plast{
+    text-align: right;
+}
+
+p{
+    text-indent: 38px;
+}
+
+#center{
+    width: 500px;
+    margin: auto;
+}

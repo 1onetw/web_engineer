@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //自定义对象
+        let person = {
+            name:"刘浩存",
+            age:20,
+            eat(){
+                console.log("干饭");
+            },
+            dance(s){
+                console.log("跳" + s);
+            } 
+        }
+        console.log(person.age);
+        console.log(person.name);
+        person.eat();
+        person.dance("现代舞")
+
+        //JS对象特点: js中的对象支持动态扩展属性和方法
+        person.adress = "北京" //可后续为对象添加属性
+        console.log(person.adress);
+
+        let user = {} //定义了一个user对象，没有任何属性和方法，可以后续添加
+        user.name = "论昌周"
+        console.log(user.name);
+    </script>
+</body>
+</html>

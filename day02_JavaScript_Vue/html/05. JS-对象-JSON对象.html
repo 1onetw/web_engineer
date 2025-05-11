@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            JSON对象:
+                1.本质是通过JavaScript对象标记法书写的文本
+                2.现多用于作为数据载体，在网络中进行数据传输
+            语法格式:
+                1.let 变量名 = {"key":value,"key":value,...}; //JSON对象，输出时调用toString方法变为json字符串
+                2.let 数组名 = [value,value,value]; //js的Array对象 也叫JSON对象
+        */
+       let json3 = {"name":"刘浩存"}
+       console.log(typeof json3,json3);
+
+        //将js对象(JSON对象)转换为json字符串
+       let person = {
+            name:"刘浩存",
+            aeg:20,
+            adress:"北京"
+       }
+       let json2 = JSON.stringify(person);
+       console.log(typeof json2,json2);
+
+       //将json字符串转换为js(JSON对象)对象
+       let json1 = '{"name":"刘浩存","aeg":20,"adress":"北京"}';
+       let person1 = JSON.parse(json1);
+       console.log(person1.name);
+       console.log(person1.aeg);
+
+
+    
+
+       //注意：前端框架会自动实现转换，了解即可
+    </script>
+</body>
+</html>

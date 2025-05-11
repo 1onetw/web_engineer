@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="imgId" src="" alt="">
+    <div class="divs">
+        <div class="divs">
+            <p>我爱刘浩存</p>
+        </div>
+    </div>
+    <script>
+        /*
+            获取: 使用Document对象提供的方法(ES5旧方法)
+            getElementById: 根据id属性值获取，返回一个element对象
+            
+            获取: 使用Document对象提供的方法(ES6新方法)
+            document.querySelector("css选择器"): 根据css选择器获取一个element对象
+            document.querySelectorAll("css选择器"): 根据css选择器获取一个element对象数组
+        */
+       //演示:
+       let img = document.querySelector("#imgId");
+       console.log(img);
+        
+       let divs = document.querySelectorAll(".divs");
+       console.log(divs);
+       for (const div of divs) {
+            console.log(div);
+       }
+    </script>
+</body>
+</html>

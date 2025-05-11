@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="app5" border="1">
+        <tr v-for="(user,index) in users">
+            <td>{{index + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.gender==1 ? "男" : "女"}}</td>
+            <td>{{user.score}}</td>
+            <td v-if="user.score > 60 && user.score <80">及格</td>
+            <td v-else-if="user.score >= 80">优秀</td>
+            <td v-else style="color: red;">不及格</td>
+        </tr>
+    </table>
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script>
+        new Vue({
+            el:"#app5",
+            data:{
+                users:[
+                        {
+                            name:"刘浩存",
+                            age:20,
+                            gender:2,
+                            score:78
+                        },
+                        {
+                            name:"论昌周",
+                            age:20,
+                            gender:1,
+                            score:100
+                        },
+                        {
+                            name:"草莓",
+                            age:20,
+                            gender:2,
+                            score:95
+                        }
+                    ]
+            },
+            mounted(){  //  页面加载完成后调用此方法
+                //页面加载完成之后向服务器发送请求，获取数据，更新模型数据users
+                axios.get("请求地址").then(result=>{
+                    // console.log(result.data.data);
+
+                    //this表示vue对象，所有的模型数据(包括users)都会被封装到vue对象身上，
+                    //可以通过this.users获取users模型数据
+                    this.users = result.data.data;  
+                    
+                    
+                })
+            }
+        })
+    </script>
+</body>
+</html>

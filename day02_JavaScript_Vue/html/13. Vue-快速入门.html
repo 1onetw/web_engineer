@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        Vue是什么?
+            1.Vue是一套前端框架，免除原生JavaScript的DOM操作，简化书写
+            2.基于MVVM思想实现双向数据绑定,我们只需要将编程的重点放在数据上
+        使用Vue的基本步骤:
+            1.引入Vue.js文件
+            2.在JS代码区域，创建Vue核心对象，定义数据模型(变量)
+            3.将视图(HTML标签)和数据模型(变量)进行绑定
+     -->
+
+     <!-- 3. -->
+     <div id="app6">
+        <!-- {{}} 插值表达式，里面变量可以进行三元运算符、函数调用、算数运算 -->
+        <p>{{message}}</p>  
+        <input type="text" v-model="message">
+     </div>
+
+     <!-- 1. -->
+     <script src="js/vue.js"></script>
+     <!-- 2. -->
+     <script>
+        new Vue({
+            el:"#app6", //定义vue接管的区域，只有在这个区域内，才可以使用vue的表达式获取数据
+            data:{      //定义数据模型，也就是页面要展示的数据
+                message:"我爱你,刘浩存"
+            }
+        })
+     </script>
+     
+</body>
+</html>

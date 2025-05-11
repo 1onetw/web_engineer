@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cls">我爱刘浩存</div>
+    <div class="cls">刘浩存爱我</div>
+    
+    <script>
+
+        /*
+            对元素的操作:
+                1.访问内容体:元素对象.innerHTML
+                2.访问输入框内容:元素对象.value
+                3.访问属性:元素对象.属性名
+                4.访问样式:元素对象.style.样式属性名
+        */
+
+        //演示:
+        let divs = document.querySelectorAll(".cls");
+        for (let div of divs) {
+            div.innerHTML += '<font color="red">very very very~~~</font>';
+            
+        }
+    </script>
+</body>
+</html>

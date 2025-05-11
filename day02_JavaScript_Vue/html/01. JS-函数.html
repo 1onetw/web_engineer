@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 定义函数: 普通定义、匿名函数、箭头函数
+        // 1.普通定义
+        function add(a,b) {
+            return a + b;
+        }
+        let rst = add(10,20);
+        console.log(rst);
+
+        // 2.匿名函数
+        let add1 = function (a,b){
+            return a + b;
+        }
+        let rst1 = add1(100,200);
+        console.log(rst1);
+
+        //3.箭头函数
+        //形参为一个则可省略小括号
+        //方法体为一行则可省略return和{}
+        let add2 = (a,b)=>{
+            return a + b;
+        }
+        let rst2 = add2(1000,2000);
+        console.log(rst2);
+
+        //应用场景: 
+        /*
+            普通定义: 用于多处，提高代码复用性
+            匿名函数和箭头函数: 作为方法的参数，只用于这个方法
+        */
+    </script>
+</body>
+</html>

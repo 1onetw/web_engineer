@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ajax是一项在不重新加载页面的情况下，向服务器发送请求获取数据，并更新部分网页信息的技术 -->
+    <script>
+        // 1. 创建XMLHttpRequest对象: 用于和服务器交换数据
+        let xmlHttpRequest = new XMLHttpRequest();
+        // 2. 向服务器发送异步请求
+        xmlHttpRequest.open("post","数据地址")
+        xmlHttpRequest.send();
+        // 3. 获取服务器响应数据
+        xmlHttpRequest.onreadystatechange = function(){ //事件监听
+            if(xmlHttpRequest.readyState==4 && xmlHttpRequest.status==200){ //readyState==4代表请求发完，status==200代表响应成功
+                let data = xmlHttpRequest.responseText;
+            }
+        }
+
+    </script>
+</body>
+</html>

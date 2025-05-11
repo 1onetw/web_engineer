@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" vlaue="button1" onclick="on()"></button>
+    <button id="btn2" vlaue="button2"></button>
+    
+    <script>
+        /*
+            事件绑定两种方式:
+                1.通过HTML标签的事件属性进行绑定
+                2.通过DOM元素的属性进行绑定
+        */
+       //演示:
+        //1.
+        let on = function(){
+            alert("按钮1被点击了")
+        
+        }
+
+        //2.
+        document.querySelector("#btn2").onclick = function(){
+            alert("按钮2被点击了")
+        }
+    </script>
+</body>
+</html>

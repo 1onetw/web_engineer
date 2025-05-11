@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app3">
+        <!-- v-for:对数据进行遍历展示 -->
+        <p v-for="(city,index) in citys">{{index + 1}} : {{city}}</p>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el:"#app3",
+            data:{
+                citys:["北京","上海","杭州","天津","成都"]
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load()">
+    <!-- 事件绑定的函数 不能直接把on去掉作为函数名 -->
+    <form action="http:127.0.0.1:8080"  onsubmit="sfn()">
+        <input type="text" onblur="bfn()" onfocus="ffn()" onkeydown="keydown()">
+        <input type="submit" value="提交">
+    </form>
+
+    <table border="1" onmouseover="over()" onmouseout="out()">
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+        </tr>
+    </table>
+    <script>
+        /*
+            常见事件:
+                1.onclick: 点击事件
+                失去焦点和获得焦点常用于表单的验证(在提交之前即进行验证)
+                2.onblur: 元素失去焦点
+                3.onfocus: 元素获得焦点
+                4.onload: 某个页面或某个图像被完成加载
+                5.onsubmit: 当表单提交时触发该事件
+                6.onkeydown: 某个键盘的键被按下
+                7.onmouseover: 鼠标移到某元素之上
+                8.onmouseout: 鼠标从某元素移开
+        */
+       //演示:
+       let load = function(){
+            console.log("页面加载完成");
+       }
+       let bfn = function(){
+            console.log("失去焦点");
+        }
+        let ffn = function(){
+            console.log("获得焦点");
+        }
+        let sfn = function(){
+            console.log("表单提交");
+        }
+        let keydown = function(){
+            console.log("某个键被按下");
+        }
+        let over = function(){
+            console.log("鼠标移到table上");
+        }
+        let out = function(){
+            console.log("鼠标从table移开");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //获取年月日
+        let d1 = new Date();
+        let year = d1.getFullYear();
+        let month = d1.getMonth();
+        let day = d1.getDate();
+
+        //字符串对象
+        //定义方式两种
+        //1.new String("...")
+        let s1 = new String("我爱刘浩存")
+        console.log(s1);
+        //2.普通字符串: "" '' 模板字符串: ``
+        //区别: 普通字符串引用变量需要字符串拼接，而模板字符串可通过${变量值}进行引用，不需要字符串拼接
+        let s2 = year + "年" + month +"月" +day+ "日"
+        let s3 = 'xxxx年xx月xx日'
+        let s4 = `${year}年${month}月${day}日`
+        console.log(s2);
+        console.log(s4);
+    </script>
+</body>
+</html>

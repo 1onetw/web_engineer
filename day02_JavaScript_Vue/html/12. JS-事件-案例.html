@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" value="我爱刘浩存" id="t1">
+        <br><br>
+        <input type="button" value="btn1" onclick="afn()">
+        <input type="button" value="btn2" onclick="efn()">
+        <br><br>
+        <input type="text" value="ITCAST" id="t2" onblur="bfn()" onfocus="ffn()">
+        <br><br>
+        <input type="checkbox" value="音乐" class="hobby">
+        <input type="checkbox" value="CF" class="hobby" >
+        <br><br>
+        <input type="button" value="全选" onclick="checkAll()">
+        <input type="button" value="全不选" onclick="reverse()">
+
+        
+    </form>
+    <!-- 
+        事件和DOM操作结合使用的步骤: 
+            1.给标签绑定事件(2种方式)
+            2.在事件中获取标签(元素对象)
+            3.对元素进行操作
+     -->
+    <script>
+        let afn = function(){
+            document.querySelector("#t1").value = "aaa"
+        }
+        let efn = function(){
+            document.querySelector("#t1").value = "bbb"
+        }
+        let bfn = function(){
+            let t2 = document.querySelector("#t2");
+            t2.value = t2.value.toLowerCase();
+
+        }
+        let ffn = function(){
+            let t2 = document.querySelector("#t2");
+            t2.value = t2.value.toUpperCase();
+        }
+
+        let checkAll = function(){
+            let checkboxs = document.querySelectorAll(".hobby");
+            for (let checkbox of checkboxs) {
+                checkbox.checked = true;
+            }
+        }
+        let reverse = function(){
+            let checkboxs = document.querySelectorAll(".hobby");
+            for (let checkbox of checkboxs) {
+                checkbox.checked = false;
+            }
+        }
+    </script>
+</body>
+</html>

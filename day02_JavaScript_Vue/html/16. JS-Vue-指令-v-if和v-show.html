@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app1">
+        <input type="text" v-model="age">
+
+        <!-- v-if:不满足条件则不被浏览器加载，另外两个span不占用内存 -->
+        <span v-if="age<=35">年轻人</span>
+        <span v-else-if="age>35 & age <= 60">中年人</span>
+        <span v-else>老年人</span>
+
+        <br><br><br>
+        
+        <!-- v-show:切换display属性值进行显示或隐藏，另外两个span仍占用内存 -->
+        <span v-show="age<=35">年轻人</span>
+        <span v-show="age>35 & age <= 60">中年人</span>
+        <span v-show="age>60">老年人</span>
+    </div>
+
+    
+    <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el:"#app1",
+            data:{
+                age:26
+            }
+        })
+    </script>
+
+</body>
+</html>

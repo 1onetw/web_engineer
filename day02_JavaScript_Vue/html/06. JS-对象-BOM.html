@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* 
+            BOM(Browser Object Model)对象：一类对象(浏览器对象)，JS将浏览器各个组成部分封装为对象
+            1.window对象: 浏览器窗口对象
+            2.Location对象: 地址栏对象
+            3.Navigator对象: 浏览器对象
+            4.Screen对象: 屏幕对象
+            5.History: 历史记录对象
+        */
+       //1.window对象
+       //alert(msg): 显示带有一段信息和一个确认按钮的警告框
+       alert("我爱刘浩存")
+       //confirm(msg): 显示带有一段信息和一个确认按钮和取消按钮的对话框
+       let flag = confirm("你是否确定删除?");
+       if(flag){
+        console.log("正在删除中...");
+       }
+       //setInterval(fun,毫秒值): 定时器 - 按照指定的周期(以毫秒计)循环调用函数
+       setInterval(function(){
+            console.log("循环调用调用了...");
+       },2000)
+       //setTimeout(fun,毫秒值): 定时器 - 在指定的毫秒数之后调用函数
+       setTimeout(function(){
+        console.log("定时调用调用了...");
+       },2000)
+    </script>
+</body>
+</html>
